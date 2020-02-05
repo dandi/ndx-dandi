@@ -1,0 +1,13 @@
+namespaces:
+- author:
+  - Yaroslav O Halhenko
+  contact:
+  - debian@onerussian.com
+  doc: DANDI project extension
+  name: ndx-dandi
+  schema:
+  - namespace: core
+    neurodata_types:
+    - ElectricalSeries
+  - source: ndx-dandi.extensions.yaml
+  version: 0.1.0
