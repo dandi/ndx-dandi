@@ -2,7 +2,7 @@
 
 import os.path
 
-from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec, NWBAttributeSpec
+from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec, NWBAttributeSpec, NWBDatasetSpec
 # TODO: import the following spec classes as needed
 # from pynwb.spec import NWBDatasetSpec, NWBLinkSpec, NWBDtypeSpec, NWBRefSpec
 
@@ -21,27 +21,24 @@ def main():
     # as in which namespace they are found
     # this is similar to specifying the Python modules that need to be imported
     # to use your new data types
-    ns_builder.include_type('ElectricalSeries', namespace='core')
+    ns_builder.include_type('Subject', namespace='core')
 
     # TODO: define your new data types
     # see https://pynwb.readthedocs.io/en/latest/extensions.html#extending-nwb
     # for more information
-    tetrode_series = NWBGroupSpec(
-        neurodata_type_def='TetrodeSeries',
-        neurodata_type_inc='ElectricalSeries',
-        doc=('An extension of ElectricalSeries to include the tetrode ID for '
-             'each time series.'),
-        attributes=[
-            NWBAttributeSpec(
-                name='trode_id',
-                doc='The tetrode ID.',
-                dtype='int32'
-            )
-        ],
+    dandi_subject = NWBGroupSpec(
+        neurodata_type_def='DANDISubject',
+        neurodata_type_inc='Subject',
+        doc="TODO: somehow inherit",
+        datasets=[NWBDatasetSpec(
+         name='subject_id',
+         quantity=1,  # 'zero_or_one',
+         doc="TODO: somehow inherit"
+        )]
     )
 
     # TODO: add all of your new data types to this list
-    new_data_types = [tetrode_series]
+    new_data_types = [dandi_subject]
 
     # export the spec to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))
