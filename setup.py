@@ -9,7 +9,7 @@ setup_args = {
     'name': 'ndx-dandi',
     'version': '0.1.0',
     'description': 'DANDI project extension',
-    'author': 'Yaroslav O Halhenko',
+    'author': 'Yaroslav O Halchenko',
     'author_email': 'debian@onerussian.com',
     'url': '',
     'license': 'BSD 3-Clause',

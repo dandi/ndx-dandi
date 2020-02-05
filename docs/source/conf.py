@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ndx-dandi'
-copyright = '2020, Yaroslav O Halhenko'
-author = 'Yaroslav O Halhenko'
+copyright = '2020, Yaroslav O Halchenko'
+author = 'Yaroslav O Halchenko'
 
 # The short X.Y version
 version = '0.1.0'
@@ -132,7 +132,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ndx-dandi.tex', 'ndx-dandi Documentation',
-     'Yaroslav O Halhenko', 'manual'),
+     'Yaroslav O Halchenko', 'manual'),
 ]
 
 

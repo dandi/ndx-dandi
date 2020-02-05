@@ -13,7 +13,7 @@ def main():
         doc="""DANDI project extension""",
         name="""ndx-dandi""",
         version="""0.1.0""",
-        author=list(map(str.strip, """Yaroslav O Halhenko""".split(','))),
+        author=list(map(str.strip, """Yaroslav O Halchenko""".split(','))),
         contact=list(map(str.strip, """debian@onerussian.com""".split(',')))
     )
 
