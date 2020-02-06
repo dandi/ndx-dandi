@@ -21,13 +21,14 @@ def main():
     # as in which namespace they are found
     # this is similar to specifying the Python modules that need to be imported
     # to use your new data types
-    ns_builder.include_type('Subject', namespace='core')
+    #ns_builder.include_type('Subject', namespace='core')
+    ns_builder.include_namespace('core')
 
     # TODO: define your new data types
     # see https://pynwb.readthedocs.io/en/latest/extensions.html#extending-nwb
     # for more information
     dandi_subject = NWBGroupSpec(
-        neurodata_type_def='DANDISubject',
+        neurodata_type_def='Subject',
         neurodata_type_inc='Subject',
         doc="TODO: somehow inherit",
         datasets=[NWBDatasetSpec(

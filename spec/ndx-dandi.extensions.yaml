@@ -1,5 +1,5 @@
 groups:
-- neurodata_type_def: DANDISubject
+- neurodata_type_def: Subject
   neurodata_type_inc: Subject
   doc: 'TODO: somehow inherit'
   datasets:
